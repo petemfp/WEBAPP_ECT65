@@ -21,21 +21,11 @@
 
     <a href="login.html" style="float: right;">เข้าสู่ระบบ</a>
     <ul>
-        <li>
-            <a href="#">กระทู้ที่ 1</a>
-        </li>
-        <li>
-            <a href="#">กระทู้ที่ 2</a>
-        </li>
-        <li>
-            <a href="#">กระทู้ที่ 3</a>
-        </li>
-        <li>
-            <a href="#">กระทู้ที่ 4</a>
-        </li>
-        <li>
-            <a href="#">กระทู้ที่ 5</a>
-        </li>
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+            echo "<li><a href=post.php?id=$i>กระทู้ที่ $i</a></li>";
+        }
+        ?>
     </ul>
 
 </body>
