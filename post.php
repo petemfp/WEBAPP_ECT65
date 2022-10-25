@@ -35,7 +35,7 @@
             <td align="center"><button> ส่งข้อความ</button></td>
         </tr>
         <tr>
-            <td align="center"><a href="index.html">กลับไปหน้าหลัก</a></td>
+            <td align="center"><a href="index.php">กลับไปหน้าหลัก</a></td>
         </tr>
 
     </table>
