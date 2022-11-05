@@ -59,7 +59,7 @@ if (isset($_SESSION['id'])) {
     </div>
 
     <div align="center"><br>
-      ถ้ายังไม่ได้เป็นสมาชิก <a href="register.html">กรุณาสมัครสมาขิก</a>
+      ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาขิก</a>
     </div>
   </div>
 </body>

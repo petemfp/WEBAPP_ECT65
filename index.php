@@ -40,8 +40,14 @@ if (!isset($_SESSION['id'])) {
             <br>
             <table class="table table-striped">
                 <?php
-                for ($i = 1; $i <= 10; $i++) {
-                    echo "<tr><td><a href=post.php?id=$i style=text-decoreation:none>กระทู้ที่ $i</a></td></tr>";
+                $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8", "root", "");
+                $sql = "SELECT t1.name,t1.id,t1.title,t1.loign,t1.post_data FROM post as t1 INNER JOIN
+                user as t2 ON (t1.user_id=t2.id) INNER JOIN category as t3 ON (t1.cat_id=t3.id) 
+                ORDER BY t1.post_data DESC";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch()) {
+                    echo "<tr><td>[ $row[0] ] <a style=text-decoration:name href=post.php?id=$row[1]>
+                    </a>$row[3] </td>";
                 }
                 ?>
             </table>
